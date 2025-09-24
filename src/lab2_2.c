@@ -15,10 +15,10 @@ long long factorial(int n) {
     int fact = 1, i;
     for(i = 1; i <= n; i++) {
         fact *= i;
-        return fact;
+        
     }
     // TODO: compute factorial iteratively
-
+    return fact;
 }
 
 int main(void) {
@@ -29,9 +29,8 @@ int main(void) {
     if(n<0){
         printf("error, enter a positive integer");
 } else {
-int n = fact;
-int fact = factorial(n);
-    printf("the factorial of n is: ", N, fact);
+    int fact1 = factorial(n);
+    printf("the factorial of n is: %d\n", fact1);
 }
     
 
