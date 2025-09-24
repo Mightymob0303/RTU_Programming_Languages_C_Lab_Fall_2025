@@ -37,4 +37,3 @@ int main(void) {
 
   return 0;
 }
-//run the code as ./bin/lan2_1
