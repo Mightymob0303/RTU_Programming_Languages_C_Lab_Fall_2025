@@ -41,10 +41,18 @@ int main(void) {
 
 // Implement functions below
 int my_strlen(const char *str) {
-    // TODO: count characters until '\0'
-    return 0; // placeholder
+    int dip = 0;
+    while(str[dip]!='\0'){
+    dip ++;// TODO: count characters until '\0'
+    return dip; // placeholder
 }
-
+}
 void my_strcpy(char *dest, const char *src) {
-    // TODO: copy characters until '\0'
+    int val = 0;
+    while(src[val] != '\0'){
+        dest[val] = src[val];
+        val++;
+        
+}
+    dest[val] = '\0';// TODO: copy characters until '\0'
 }
