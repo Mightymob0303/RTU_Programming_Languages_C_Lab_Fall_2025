@@ -44,8 +44,9 @@ int my_strlen(const char *str) {
     int dip = 0;
     while(str[dip]!='\0'){
     dip ++;// TODO: count characters until '\0'
-    return dip; // placeholder
-}
+     // placeholder
+    }
+    return dip;
 }
 void my_strcpy(char *dest, const char *src) {
     int val = 0;
