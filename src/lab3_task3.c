@@ -1,6 +1,6 @@
 /*
  * Lab 3, Task 3
- * Student Name, Student ID
+ * Shamil Abdurahmanov, 241ADB070
  *
  * Implement basic string handling functions.
  * Write your own versions of:
