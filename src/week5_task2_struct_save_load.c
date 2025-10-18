@@ -28,14 +28,14 @@ int main(void) {
     const char *filename = "student.txt";
 
     // TODO: Call save_student() to save student data to file
-    printf("saving student to file");
+    printf("saving student to file....\n");
     save_student(s1, filename);
     
     // TODO: Call load_student() to read data back into a new struct
-    printf("loading student from file");
+    printf("loading student from file...\n");
     Student s2 = load_student(filename);
     // TODO: Print loaded data to confirm correctness
-printf("loaded student: %s, %d, GPA %.2F\n", s2.name, s2.age, s2.gpa );
+printf("loaded student: %s, %d, GPA %.2F\n", s2.name, s2.age, s2.gpa);
 
     return 0;
 }
@@ -63,6 +63,12 @@ Student load_student(const char *filename) {
         perror("Error opening file for reading");
         exit(1);
     }
+    if (fscanf(fp, "%s %d %f", s.name, &s.age, &s.gpa) != 3) {
+        fprintf(stderr, "Error: File format incorrect or data missing.\n");
+        fclose(fp);
+        exit(1);
+    }
     fclose(fp);
+
     return s;
 }
